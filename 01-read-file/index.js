@@ -15,6 +15,6 @@ stream.on('error', (err) => {
   if(err.code === 'ENOENT') {
     console.log('File not exist');
   } else {
-    console.log(err)
+    console.log(err);
   }
 });
