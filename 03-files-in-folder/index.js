@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const path1 = path.join(__dirname);
-
-
 const readdir = require('fs/promises');
 try {
   readdir.readdir(path1, {withFileTypes: true}).then(files => {
