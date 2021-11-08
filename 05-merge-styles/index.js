@@ -3,7 +3,8 @@ const path = require('path');
 const readdir = require('fs/promises');
 const project_dist = path.join(`${__dirname}/project-dist`);
 const folder_styles = path.join(`${__dirname}/styles`);
-const stream = fs.createWriteStream(`${project_dist}/bundle.css`, 'utf8');
+
+
 readdir.readdir(folder_styles, {withFileTypes: true}).then(files => {
   for (let file of files) {
     let ext_name = path.extname(file.name);
@@ -15,11 +16,9 @@ readdir.readdir(folder_styles, {withFileTypes: true}).then(files => {
         'utf8',
         (err) => {
           if (err) throw err;
-
           console.log('Done');
         }
       ));
-
     }
   }
 });
