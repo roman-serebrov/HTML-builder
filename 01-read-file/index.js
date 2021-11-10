@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path/posix');
-const file = path.join('01-read-file', '', '', 'text.txt');
+const file = path.join(__dirname, '', '', 'text.txt');
 const stream = new fs.ReadStream(file, {encoding: 'utf-8'});
 
 let data = '';
