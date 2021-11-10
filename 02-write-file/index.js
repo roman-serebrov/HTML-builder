@@ -2,7 +2,7 @@ const readline = require('readline');
 const { stdin: input, stdout: output } = require('process');
 const fs = require('fs');
 const path = require('path/posix');
-const file_save = path.join('02-write-file', '', 'text.txt') ;
+const file_save = path.join(__dirname, '', 'text.txt') ;
 const ws = new fs.WriteStream(file_save);
 
 
